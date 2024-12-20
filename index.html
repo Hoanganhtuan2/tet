@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ứng Dụng Lì Xì 2024</title>
+    <title>Đăng Ký, Đăng Nhập và Nhận Lixi</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <h1>Nhận Lì Xì 2024</h1>
-        <nav>
-            <a href="#home">Trang Chủ</a>
-            <a href="#leaderboard">Bảng Xếp Hạng</a>
-            <a href="#about">Giới Thiệu</a>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <!-- Form đăng ký -->
+        <div class="form-container" id="registerForm">
+            <h2>Đăng Ký</h2>
+            <input type="email" id="emailRegister" placeholder="Nhập Gmail" required>
+            <input type="password" id="passwordRegister" placeholder="Nhập mật khẩu" required>
+            <input type="text" id="captcha" placeholder="Nhập mã Captcha: 1234" required>
+            <button id="registerBtn">Đăng Ký</button>
+            <p>Đã có tài khoản? <span id="switchToLogin">Đăng nhập</span></p>
+        </div>
 
-    <main>
-        <section id="home">
-            <div class="form-container">
-                <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
-                <input type="text" id="keyInput" placeholder="Nhập mã lì xì">
-                <button id="submitBtn">Mở Lì Xì</button>
-            </div>
+        <!-- Form đăng nhập -->
+        <div class="form-container" id="loginForm" style="display: none;">
+            <h2>Đăng Nhập</h2>
+            <input type="email" id="emailLogin" placeholder="Nhập Gmail" required>
+            <input type="password" id="passwordLogin" placeholder="Nhập mật khẩu" required>
+            <button id="loginBtn">Đăng Nhập</button>
+            <p>Chưa có tài khoản? <span id="switchToRegister">Đăng ký ngay</span></p>
+        </div>
 
-            <div id="resultMessage" class="result-message"></div>
-        </section>
-
-        <section id="leaderboard">
-            <h2>Bảng Xếp Hạng</h2>
-            <ul id="leaderboardList"></ul>
-        </section>
-
-        <section id="about">
-            <h2>Giới Thiệu</h2>
-            <p>Ứng dụng Lì Xì 2024 giúp bạn nhận lì xì trực tuyến trong dịp Tết Nguyên Đán. Chúc bạn một năm mới an khang thịnh vượng!</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 - Ứng Dụng Lì Xì 2024</p>
-    </footer>
+        <!-- Phần nhận Lixi -->
+        <div class="lixi-container" id="lixiContainer" style="display: none;">
+            <h2>Nhận Lixi</h2>
+            <input type="text" id="lixiKey" placeholder="Nhập Key nhận Lixi" required>
+            <button id="getLixiBtn">Nhận Lixi</button>
+            <p id="lixiResult"></p>
+        </div>
+    </div>
 </body>
 </html>
