@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(145deg, #FFFAE3, #FFE4C1);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF6347;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-container input {
+    padding: 12px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#submitBtn {
+    background-color: #FF4500;
+    padding: 12px 30px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+#submitBtn:hover {
+    background-color: #FF6347;
+    transform: perspective(600px) rotateY(10deg);
+}
+
+.result-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #28a745;
+    text-align: center;
+}
+
+#leaderboard {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#leaderboardList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leaderboard li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#leaderboard li:hover {
+    background-color: #f0f0f0;
+}
